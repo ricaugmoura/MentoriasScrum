@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, ShieldCheck, BookOpen, Users, Award } from 'lucide-react';
+import { ArrowRight, Sparkles, ShieldCheck, BookOpen, Users, Award, UserCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -105,12 +105,12 @@ const Hero = () => {
 
                 <div className="flex items-start gap-4">
                   <div className="p-2.5 rounded-xl bg-primary/10 border border-primary/20 text-primary mt-0.5 flex-shrink-0">
-                    <Users className="w-5 h-5" />
+                    <UserCheck className="w-5 h-5" />
                   </div>
                   <div className="space-y-1">
-                    <h3 className="font-display font-bold text-white text-base">Aulas Interativas Ao Vivo</h3>
+                    <h3 className="font-display font-bold text-white text-base">Atendimento Individual e Personalizado</h3>
                     <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                      Sessões online dinâmicas para debater cenários reais e tirar dúvidas em tempo real.
+                      Sessões exclusivas focadas no seu ritmo e nos seus objetivos, eliminando todas as suas dúvidas.
                     </p>
                   </div>
                 </div>
