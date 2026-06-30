@@ -11,6 +11,20 @@ const Contato = () => {
   const [loading, setLoading] = useState(false);
   const [feedback, setFeedback] = useState(null); // { success: boolean, msg: string }
 
+  React.useEffect(() => {
+    document.title = 'Fale com um Mentor | Contato - Mentorias Scrum';
+    const metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) {
+      metaDesc.setAttribute('content', 'Entre em contato com nossos especialistas em agilidade e tire suas dúvidas sobre nossos cursos preparatórios e agendas de mentorias Scrum.');
+    }
+    return () => {
+      document.title = 'Mentorias Scrum | Preparatórios para Certificação Ágil';
+      if (metaDesc) {
+        metaDesc.setAttribute('content', 'Prepare-se para as certificações ágeis da Scrum.org com nossos mentores especialistas. Mentorias Scrum focadas na sua aprovação.');
+      }
+    };
+  }, []);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));

@@ -11,6 +11,38 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Structured Data JSON-LD (SEO Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "EducationalOrganization",
+          "@id": "https://scrum-mentorias4.vercel.app/#organization",
+          "name": "Mentorias Scrum",
+          "url": "https://scrum-mentorias4.vercel.app/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://scrum-mentorias4.vercel.app/logo-transparent.png"
+          },
+          "sameAs": [
+            "https://wa.me/5511957318784"
+          ],
+          "description": "Portal especializado em mentorias preparatórias de alto impacto para obtenção de certificações ágeis da Scrum.org (PSM I, PSM II, PSPO I, PSPO II, PSK, PAL I, PAL-EBM, SPS, PSU, PSD)."
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://scrum-mentorias4.vercel.app/#website",
+          "url": "https://scrum-mentorias4.vercel.app/",
+          "name": "Mentorias Scrum",
+          "publisher": {
+            "@id": "https://scrum-mentorias4.vercel.app/#organization"
+          }
+        }
+      ]
+    }
+    </script>
   </head>
   <body class="bg-[#0b0f19] text-slate-100 font-sans antialiased overflow-x-hidden">
     <div id="root"></div>

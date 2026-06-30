@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scrum-mentorias4.vercel.app/sitemap.xml

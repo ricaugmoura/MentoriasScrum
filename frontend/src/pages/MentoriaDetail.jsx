@@ -7,6 +7,24 @@ const MentoriaDetail = () => {
   const { slug } = useParams();
   const course = coursesData[slug];
 
+  React.useEffect(() => {
+    if (course) {
+      document.title = `Mentoria ${course.title} | ${course.subtitle} - Mentorias Scrum`;
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute('content', course.description);
+      }
+    }
+    return () => {
+      // Restore default title on unmount
+      document.title = 'Mentorias Scrum | Preparatórios para Certificação Ágil';
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute('content', 'Prepare-se para as certificações ágeis da Scrum.org com nossos mentores especialistas. Mentorias Scrum focadas na sua aprovação.');
+      }
+    };
+  }, [course]);
+
   if (!course) {
     return (
       <div className="max-w-4xl mx-auto px-4 py-20 text-center space-y-6">
