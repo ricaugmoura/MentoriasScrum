@@ -4,25 +4,26 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden flex items-center">
+    <section className="relative py-24 lg:py-36 overflow-hidden flex items-center min-h-[85vh]">
       {/* Background radial accent glow */}
       <div className="absolute top-[20%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[40vw] rounded-full bg-primary/10 blur-[150px] pointer-events-none z-0"></div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-100">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        {/* Spacious 50/50 split grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           
           {/* Left Column: Text & CTAs */}
-          <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
+          <div className="space-y-8 text-center lg:text-left">
             
             {/* Tagline */}
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-xs sm:text-sm font-semibold text-primary animate-fade-in">
+            <div className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-primary/10 border border-primary/20 text-xs sm:text-sm font-semibold text-primary animate-fade-in">
               <Sparkles className="w-4 h-4" />
               <span>Acelere sua aprovação com especialistas</span>
             </div>
 
             {/* Title */}
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-5xl text-white tracking-tight leading-[1.15] animate-slide-up">
-              Mentorias de Alto Impacto para <span className="text-primary glow-text-primary">Certificações Ágeis</span>
+            <h1 className="font-display font-extrabold text-4xl sm:text-5xl xl:text-6xl text-white tracking-tight leading-[1.1] animate-slide-up">
+              Mentorias de Alto Impacto para <span className="block lg:inline bg-gradient-to-r from-primary to-cyan-400 bg-clip-text text-transparent glow-text-primary">Certificações Ágeis</span>
             </h1>
 
             {/* Description */}
@@ -31,7 +32,7 @@ const Hero = () => {
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
               <a
                 href="#mentorias"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-primary text-dark font-bold text-base hover:bg-primary/90 hover:scale-[1.02] shadow-lg shadow-primary/25 active:scale-[0.98] transition-all cursor-pointer"
@@ -48,75 +49,86 @@ const Hero = () => {
             </div>
 
             {/* Trust Points */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-6 text-sm text-slate-400">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-4 text-sm text-slate-400">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-primary" />
+                <ShieldCheck className="w-5 h-5 text-primary flex-shrink-0" />
                 <span>+95% de Aprovação</span>
               </div>
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-primary" />
+                <ShieldCheck className="w-5 h-5 text-primary flex-shrink-0" />
                 <span>Simulados Exclusivos</span>
               </div>
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-primary" />
+                <ShieldCheck className="w-5 h-5 text-primary flex-shrink-0" />
                 <span>Suporte via WhatsApp</span>
               </div>
             </div>
 
           </div>
 
-          {/* Right Column: Visual illustration or high-end mockup card */}
-          <div className="lg:col-span-5 hidden lg:block animate-fade-in">
-            <div className="relative p-8 rounded-2xl bg-dark-card/45 border border-white/5 shadow-2xl backdrop-blur-sm overflow-hidden glow-primary space-y-6">
+          {/* Right Column: Premium Visual Card */}
+          <div className="hidden lg:block animate-fade-in">
+            {/* Limit max-w to align nicely on right side with proper spacing */}
+            <div className="relative p-8 rounded-3xl bg-gradient-to-b from-[#131926]/90 to-[#0e1320]/95 border border-white/10 shadow-2xl shadow-black/40 overflow-hidden glow-primary space-y-8 max-w-lg ml-auto hover:scale-[1.01] hover:border-primary/20 transition-all duration-300">
               
               {/* Card Header decoration */}
-              <div className="flex justify-between items-center border-b border-dark-border/40 pb-4">
+              <div className="flex justify-between items-center border-b border-white/10 pb-4">
                 <span className="text-xs text-primary font-bold uppercase tracking-wider">Metodologia Mentorias Scrum</span>
-                <span className="px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-[10px] font-semibold text-primary font-mono">Método Ativo</span>
+                <span className="px-2.5 py-1 rounded-full bg-primary/10 border border-primary/20 text-[10px] font-semibold text-primary font-mono">Método Ativo</span>
               </div>
 
-              {/* Graphic simulated content: checklist items instead of code */}
-              <div className="space-y-5 text-slate-300">
-                <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-primary/10 border border-primary/20 text-primary mt-0.5">
+              {/* Checklist items with flex-shrink-0 to prevent icon clipping */}
+              <div className="space-y-6 text-slate-300">
+                <div className="flex items-start gap-4">
+                  <div className="p-2.5 rounded-xl bg-primary/10 border border-primary/20 text-primary mt-0.5 flex-shrink-0">
                     <BookOpen className="w-5 h-5" />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-white text-sm sm:text-base">Guia Scrum Descomplicado</h3>
-                    <p className="text-xs text-slate-400 mt-1">Didática simplificada baseada no Scrum Guide 2020, focando em conceitos práticos de mercado.</p>
+                  <div className="space-y-1">
+                    <h3 className="font-display font-bold text-white text-base">Guia Scrum Descomplicado</h3>
+                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                      Didática simplificada baseada no Scrum Guide 2020, focando em conceitos práticos de mercado.
+                    </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-primary/10 border border-primary/20 text-primary mt-0.5">
+                <div className="flex items-start gap-4">
+                  <div className="p-2.5 rounded-xl bg-primary/10 border border-primary/20 text-primary mt-0.5 flex-shrink-0">
                     <ShieldCheck className="w-5 h-5" />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-white text-sm sm:text-base">Simulados Realistas</h3>
-                    <p className="text-xs text-slate-400 mt-1">Acesso a centenas de questões comentadas idênticas aos exames oficiais da Scrum.org.</p>
+                  <div className="space-y-1">
+                    <h3 className="font-display font-bold text-white text-base">Simulados Realistas</h3>
+                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                      Acesso a centenas de questões comentadas idênticas aos exames oficiais da Scrum.org.
+                    </p>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-3">
-                  <div className="p-2 rounded-lg bg-primary/10 border border-primary/20 text-primary mt-0.5">
+                <div className="flex items-start gap-4">
+                  <div className="p-2.5 rounded-xl bg-primary/10 border border-primary/20 text-primary mt-0.5 flex-shrink-0">
                     <Users className="w-5 h-5" />
                   </div>
-                  <div>
-                    <h3 className="font-bold text-white text-sm sm:text-base">Aulas Interativas Ao Vivo</h3>
-                    <p className="text-xs text-slate-400 mt-1">Sessões online dinâmicas para debater cenários reais e tirar dúvidas em tempo real.</p>
+                  <div className="space-y-1">
+                    <h3 className="font-display font-bold text-white text-base">Aulas Interativas Ao Vivo</h3>
+                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                      Sessões online dinâmicas para debater cenários reais e tirar dúvidas em tempo real.
+                    </p>
                   </div>
                 </div>
               </div>
               
               {/* Decorative Stats */}
-              <div className="grid grid-cols-2 gap-4 pt-6 border-t border-dark-border/40">
-                <div>
-                  <p className="text-3xl font-extrabold text-white">97%</p>
-                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mt-1">Média de Nota nos Exames</p>
+              <div className="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">
+                <div className="space-y-1">
+                  <p className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">97%</p>
+                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-snug mt-1">
+                    Média de Nota nos Exames
+                  </p>
                 </div>
-                <div>
-                  <p className="text-3xl font-extrabold text-white">2.5k+</p>
-                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mt-1">Alunos Mentorados</p>
+                <div className="space-y-1">
+                  <p className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">2.5k+</p>
+                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-snug mt-1">
+                    Alunos Mentorados
+                  </p>
                 </div>
               </div>
             </div>
