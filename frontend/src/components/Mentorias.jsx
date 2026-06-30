@@ -1,42 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, Calendar, Users, MessageCircle, ArrowRight } from 'lucide-react';
-
-const courses = [
-  {
-    slug: 'psm-i',
-    title: 'Preparatório PSM I',
-    subtitle: 'Professional Scrum Master I',
-    description: 'Domine o framework Scrum, os papéis, eventos, artefatos e as regras descritas no Scrum Guide. Desenvolva postura de líder servil e prepare-se para gabaritar a certificação mais desejada do mercado ágil.',
-    duration: '12h ao vivo + Gravações',
-    audience: 'Scrum Masters, Gestores, Líderes e Desenvolvedores',
-    color: 'border-primary/30 hover:border-primary',
-    tag: 'Mais Procurado',
-    whatsappMsg: 'Olá! Gostaria de saber mais sobre a Mentoria Preparatória para o PSM I.'
-  },
-  {
-    slug: 'pspo-i',
-    title: 'Preparatório PSPO I',
-    subtitle: 'Professional Scrum Product Owner I',
-    description: 'Aprenda como maximizar o valor de negócios de produtos e sistemas de software. Foco em gestão do Product Backlog, release planning, métricas de valor e colaboração com stakeholders.',
-    duration: '12h ao vivo + Gravações',
-    audience: 'Product Owners, Product Managers, Empreendedores e Analistas',
-    color: 'border-cyan-500/20 hover:border-cyan-400',
-    tag: 'Especialização',
-    whatsappMsg: 'Olá! Gostaria de saber mais sobre a Mentoria Preparatória para o PSPO I.'
-  },
-  {
-    slug: 'sps-nexus',
-    title: 'Scaled Professional Scrum (SPS)',
-    subtitle: 'Nexus Framework',
-    description: 'Descubra como escalar o Scrum usando o framework Nexus para coordenar o trabalho de múltiplos times Scrum trabalhando em um único produto. Ideal para desatar nós de dependências e acelerar entregas.',
-    duration: '8h ao vivo + Gravações',
-    audience: 'Agile Coaches, Scrum Masters experientes e Agile Leaders',
-    color: 'border-purple-500/20 hover:border-purple-400',
-    tag: 'Escalado',
-    whatsappMsg: 'Olá! Gostaria de saber mais sobre a Mentoria para SPS (Nexus).'
-  }
-];
+import { courses } from '../data/courses';
 
 const Mentorias = () => {
   return (
