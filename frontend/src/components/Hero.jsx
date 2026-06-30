@@ -117,14 +117,18 @@ const Hero = () => {
               {/* Decorative Stats */}
               <div className="grid grid-cols-2 gap-6 pt-6 border-t border-white/10">
                 <div className="space-y-1">
-                  <p className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">97%</p>
-                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-snug mt-1">
+                  <p className="text-4xl sm:text-5xl font-black bg-gradient-to-r from-primary to-cyan-300 bg-clip-text text-transparent tracking-tight">
+                    97%
+                  </p>
+                  <p className="text-[10px] sm:text-xs text-slate-400 font-bold uppercase tracking-wider leading-tight mt-1">
                     Média de Nota nos Exames
                   </p>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">2.5k+</p>
-                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider leading-snug mt-1">
+                  <p className="text-4xl sm:text-5xl font-black bg-gradient-to-r from-primary to-cyan-300 bg-clip-text text-transparent tracking-tight">
+                    2.5k+
+                  </p>
+                  <p className="text-[10px] sm:text-xs text-slate-400 font-bold uppercase tracking-wider leading-tight mt-1">
                     Alunos Mentorados
                   </p>
                 </div>
