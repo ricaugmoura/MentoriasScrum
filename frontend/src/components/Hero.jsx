@@ -28,7 +28,7 @@ const Hero = () => {
 
             {/* Description */}
             <p className="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Preparamos você com didática impecável, dinâmicas reais e simulados práticos para ser aprovado nos exames da <strong>Scrum.org</strong> (PSM I, PSPO I) na primeira tentativa.
+              Preparamos você com didática impecável, dinâmicas reais e simulados práticos para ser aprovado nos exames da <strong>Scrum.org</strong> na primeira tentativa.
             </p>
 
             {/* Action Buttons */}
