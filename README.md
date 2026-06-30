@@ -1,8 +1,8 @@
-# ScrumMentors - Website com Integração Nativa WhatsApp
+# Portal Mentorias Scrum & Automação WhatsApp
 
-Este é um boilerplate completo e estruturado para um website desenvolvido em **Node.js** com integração nativa com o **WhatsApp**. Ele fornece uma interface de dashboard premium com design moderno (glassmorphism), sincronização de status em tempo real via **WebSockets (Socket.io)**, e endpoints de **API REST** para envio de mensagens automatizadas.
+Este projeto foi remodelado para se tornar o portal oficial da **Mentorias Scrum**, desenvolvido em **React (Vite + Tailwind CSS v4 + PWA)** integrado a um backend robusto em **Node.js/Express** para gerenciamento de leads (Supabase), envio de contatos (Nodemailer), avaliações (Google Places API) e automação de mensagens (whatsapp-web.js + Socket.io).
 
-A integração é feita de forma nativa utilizando a biblioteca `whatsapp-web.js` que se conecta via cliente web sem a necessidade de APIs oficiais ou pagas.
+O repositório também inclui um watcher automático do Git (`scripts/auto-git-commit.py`) para salvar modificações em tempo real.
 
 ---
 
