@@ -66,46 +66,57 @@ const Hero = () => {
           </div>
 
           {/* Right Column: Visual illustration or high-end mockup card */}
-          <div className="lg:col-span-5 hidden lg:block">
-            <div className="relative p-8 rounded-2xl bg-dark-card/40 border border-white/5 shadow-2xl backdrop-blur-sm overflow-hidden glow-primary">
+          <div className="lg:col-span-5 hidden lg:block animate-fade-in">
+            <div className="relative p-8 rounded-2xl bg-dark-card/45 border border-white/5 shadow-2xl backdrop-blur-sm overflow-hidden glow-primary space-y-6">
               
               {/* Card Header decoration */}
-              <div className="flex justify-between items-center mb-6">
-                <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500/80"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500/80"></div>
-                </div>
-                <span className="text-xs text-slate-500 font-mono">scrum_guide_v2020.sh</span>
+              <div className="flex justify-between items-center border-b border-dark-border/40 pb-4">
+                <span className="text-xs text-primary font-bold uppercase tracking-wider">Metodologia Mentorias Scrum</span>
+                <span className="px-2 py-0.5 rounded-full bg-primary/10 border border-primary/20 text-[10px] font-semibold text-primary font-mono">Método Ativo</span>
               </div>
 
-              {/* Graphic Code/Simulated content */}
-              <div className="space-y-4 font-mono text-sm text-slate-400">
-                <p className="text-primary font-bold"># Preparatório Exclusivo</p>
-                <div className="pl-4 border-l border-primary/20 space-y-2">
-                  <p><span className="text-slate-500">class</span> <span className="text-white">MentoriaScrum</span> &#123;</p>
-                  <p className="pl-4"><span className="text-slate-500">constructor</span>() &#123;</p>
-                  <p className="pl-8 text-cyan-400">this.didatica = "Mercado & Prática";</p>
-                  <p className="pl-8 text-cyan-400">this.foco = "Aprovação Scrum.org";</p>
-                  <p className="pl-8 text-cyan-400">this.metodologia = "Ativa";</p>
-                  <p className="pl-4">&#125;</p>
-                  <p className="pl-4"><span className="text-slate-500">async</span> <span className="text-emerald-400">obterSucesso</span>(aluno) &#123;</p>
-                  <p className="pl-8 text-cyan-400"><span className="text-slate-500">await</span> aluno.estudarSimulados();</p>
-                  <p className="pl-8 text-cyan-400"><span className="text-slate-500">return</span> "CERTIFICADO_EMITIDO";</p>
-                  <p className="pl-4">&#125;</p>
-                  <p>&#125;</p>
+              {/* Graphic simulated content: checklist items instead of code */}
+              <div className="space-y-5 text-slate-300">
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-primary/10 border border-primary/20 text-primary mt-0.5">
+                    <BookOpen className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-sm sm:text-base">Guia Scrum Descomplicado</h3>
+                    <p className="text-xs text-slate-400 mt-1">Didática simplificada baseada no Scrum Guide 2020, focando em conceitos práticos de mercado.</p>
+                  </div>
                 </div>
-                
-                {/* Decorative Stats */}
-                <div className="grid grid-cols-2 gap-4 pt-6 mt-6 border-t border-dark-border font-sans">
-                  <div>
-                    <p className="text-2xl font-extrabold text-white">97%</p>
-                    <p className="text-xs text-slate-500">Média de Nota nos Exames</p>
+
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-primary/10 border border-primary/20 text-primary mt-0.5">
+                    <ShieldCheck className="w-5 h-5" />
                   </div>
                   <div>
-                    <p className="text-2xl font-extrabold text-white">2.5k+</p>
-                    <p className="text-xs text-slate-500">Alunos Mentorados</p>
+                    <h3 className="font-bold text-white text-sm sm:text-base">Simulados Realistas</h3>
+                    <p className="text-xs text-slate-400 mt-1">Acesso a centenas de questões comentadas idênticas aos exames oficiais da Scrum.org.</p>
                   </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <div className="p-2 rounded-lg bg-primary/10 border border-primary/20 text-primary mt-0.5">
+                    <Users className="w-5 h-5" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-white text-sm sm:text-base">Aulas Interativas Ao Vivo</h3>
+                    <p className="text-xs text-slate-400 mt-1">Sessões online dinâmicas para debater cenários reais e tirar dúvidas em tempo real.</p>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Decorative Stats */}
+              <div className="grid grid-cols-2 gap-4 pt-6 border-t border-dark-border/40">
+                <div>
+                  <p className="text-3xl font-extrabold text-white">97%</p>
+                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mt-1">Média de Nota nos Exames</p>
+                </div>
+                <div>
+                  <p className="text-3xl font-extrabold text-white">2.5k+</p>
+                  <p className="text-[10px] text-slate-500 font-bold uppercase tracking-wider mt-1">Alunos Mentorados</p>
                 </div>
               </div>
             </div>
