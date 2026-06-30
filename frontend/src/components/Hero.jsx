@@ -48,21 +48,7 @@ const Hero = () => {
               </Link>
             </div>
 
-            {/* Trust Points */}
-            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-6 pt-4 text-sm text-slate-400">
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>+95% de Aprovação</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>Simulados Exclusivos</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <ShieldCheck className="w-5 h-5 text-primary flex-shrink-0" />
-                <span>Suporte via WhatsApp</span>
-              </div>
-            </div>
+
 
           </div>
 
