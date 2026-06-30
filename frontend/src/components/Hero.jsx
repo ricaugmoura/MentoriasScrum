@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, ShieldCheck, BookOpen, Users, Award, UserCheck } from 'lucide-react';
+import { ArrowRight, Sparkles, ShieldCheck, BookOpen, Users, Award, UserCheck, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -97,6 +97,18 @@ const Hero = () => {
                     <h3 className="font-display font-bold text-white text-base">Atendimento Individual e Personalizado</h3>
                     <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                       Sessões exclusivas focadas no seu ritmo e nos seus objetivos, eliminando todas as suas dúvidas.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="p-2.5 rounded-xl bg-primary/10 border border-primary/20 text-primary mt-0.5 flex-shrink-0">
+                    <MessageCircle className="w-5 h-5" />
+                  </div>
+                  <div className="space-y-1">
+                    <h3 className="font-display font-bold text-white text-base">Suporte via WhatsApp</h3>
+                    <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                      Canal de contato direto para tirar suas dúvidas rapidamente durante toda a sua preparação.
                     </p>
                   </div>
                 </div>
