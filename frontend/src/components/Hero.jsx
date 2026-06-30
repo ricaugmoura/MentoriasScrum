@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, ShieldCheck, BookOpen, Users } from 'lucide-react';
+import { ArrowRight, Sparkles, ShieldCheck, BookOpen, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
@@ -81,12 +81,12 @@ const Hero = () => {
               <div className="space-y-6 text-slate-300">
                 <div className="flex items-start gap-4">
                   <div className="p-2.5 rounded-xl bg-primary/10 border border-primary/20 text-primary mt-0.5 flex-shrink-0">
-                    <BookOpen className="w-5 h-5" />
+                    <Award className="w-5 h-5" />
                   </div>
                   <div className="space-y-1">
-                    <h3 className="font-display font-bold text-white text-base">Guia Scrum Descomplicado</h3>
+                    <h3 className="font-display font-bold text-white text-base">Os Melhores Mentores</h3>
                     <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
-                      Didática simplificada baseada no Scrum Guide 2020, focando em conceitos práticos de mercado.
+                      Profissionais experientes e certificados para guiar você passo a passo rumo à aprovação.
                     </p>
                   </div>
                 </div>
