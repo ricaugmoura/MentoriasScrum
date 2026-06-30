@@ -9,7 +9,7 @@
         "dev:frontend": "npm --prefix frontend run dev",
         "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
         "build:frontend": "npm --prefix frontend run build",
-        "build": "npm run build:frontend",
+        "build": "npm --prefix frontend install --legacy-peer-deps && npm run build:frontend",
         "install:frontend": "npm --prefix frontend install",
         "lint": "eslint src/ public/js/ scripts/ tests/",
         "format": "prettier --write .",
