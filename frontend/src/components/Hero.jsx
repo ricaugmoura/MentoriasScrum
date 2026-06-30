@@ -21,13 +21,13 @@ const Hero = () => {
             </div>
 
             {/* Title */}
-            <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl text-white tracking-tight leading-[1.1] animate-slide-up">
-              Mentoria de Alto Impacto para <span className="text-primary glow-text-primary">Certificações Ágeis</span>
+            <h1 className="font-display font-extrabold text-4xl sm:text-5xl lg:text-5xl text-white tracking-tight leading-[1.15] animate-slide-up">
+              Mentorias de Alto Impacto para <span className="text-primary glow-text-primary">Certificações Ágeis</span>
             </h1>
 
             {/* Description */}
             <p className="text-lg sm:text-xl text-slate-300 font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
-              Não vendemos certificações. Preparamos você com didática impecável, dinâmicas reais e simulados práticos para ser aprovado nos exames da <strong>Scrum.org</strong> (PSM I, PSPO I) na primeira tentativa.
+              Preparamos você com didática impecável, dinâmicas reais e simulados práticos para ser aprovado nos exames da <strong>Scrum.org</strong> (PSM I, PSPO I) na primeira tentativa.
             </p>
 
             {/* Action Buttons */}
