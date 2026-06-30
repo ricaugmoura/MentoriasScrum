@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/socket.io/(.*)",
+      "dest": "/socket.io/$1"
+    },
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/logo-transparent.png",
+      "dest": "/logo-transparent.png"
+    },
+    {
+      "src": "/LOGO MENTORIAS SCRUM.png",
+      "dest": "/LOGO MENTORIAS SCRUM.png"
+    },
+    {
+      "src": "/pwa-192x192.png",
+      "dest": "/pwa-192x192.png"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "dest": "/pwa-512x512.png"
+    },
+    {
+      "src": "/sw.js",
+      "dest": "/sw.js"
+    },
+    {
+      "src": "/workbox-9c191d2f.js",
+      "dest": "/workbox-9c191d2f.js"
+    },
+    {
+      "src": "/manifest.webmanifest",
+      "dest": "/manifest.webmanifest"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
