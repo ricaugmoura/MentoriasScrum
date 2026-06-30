@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Sparkles, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Sparkles, ShieldCheck, BookOpen, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {
