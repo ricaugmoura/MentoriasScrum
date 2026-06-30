@@ -40,7 +40,7 @@ const courses = [
 
 const Mentorias = () => {
   return (
-    <section id="mentorias" className="relative py-20 bg-dark-card/30 border-y border-dark-border">
+    <section id="mentorias" className="relative pt-10 pb-20 lg:pt-12 lg:pb-24 bg-dark-card/30 border-y border-dark-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
-    <section className="relative py-24 lg:py-36 overflow-hidden flex items-center min-h-[85vh]">
+    <section className="relative pt-24 pb-12 lg:pt-32 lg:pb-16 overflow-hidden flex items-center">
       {/* Background radial accent glow */}
       <div className="absolute top-[20%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[70vw] h-[40vw] rounded-full bg-primary/10 blur-[150px] pointer-events-none z-0"></div>
 
