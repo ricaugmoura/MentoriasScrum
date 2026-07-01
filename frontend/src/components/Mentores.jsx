@@ -5,7 +5,7 @@ const mentors = [
   {
     name: 'Ricardo Augusto de Moura',
     role: 'Mentor Principal & Agile Coach',
-    bio: 'Minha jornada no ecossistema de tecnologia me transformou em um especialista em conectar processos ágeis a resultados de mercado. Atuando como Agile Coach, Scrum Master e consultor sênior, trago a bagagem prática de quem enfrenta e resolve os desafios reais da gestão de projetos e da inovação no dia a dia.\n\nNa MentoriasScrum, traduzo metodologias complexas em ferramentas simples e poderosas para potencializar a sua carreira ou a sua empresa. Meu compromisso é com o seu crescimento contínuo e com uma agilidade que faz sentido e funciona na prática.',
+    bio: 'Minha jornada no ecossistema de tecnologia me transformou em um especialista em conectar processos ágeis a resultados de mercado. Atuando como Agile Coach, Scrum Master e consultor sênior, trago a bagagem prática de quem enfrenta e resolve os desafios reais da gestão de projetos e da inovação no dia a dia. Na MentoriasScrum, traduzo metodologias complexas em ferramentas simples e poderosas para potencializar a sua carreira ou a sua empresa. Meu compromisso é com o seu crescimento contínuo e com uma agilidade que faz sentido e funciona na prática.',
     certifications: [
       'Professional Scrum Master I & II (PSM I, PSM II)',
       'Professional Scrum Product Owner I & II (PSPO I, PSPO II)',
