@@ -92,20 +92,15 @@ const MentoriaDetail = () => {
           <div className="lg:col-span-8 space-y-6">
             <h2 className="font-display font-extrabold text-2xl text-white">Conteúdo Programático</h2>
             
-            <div className="space-y-4">
-              {course.syllabus.map((module, i) => (
-                <div key={i} className="p-6 rounded-2xl bg-dark-card border border-dark-border/80">
-                  <h3 className="font-display font-bold text-base sm:text-lg text-white mb-4">{module.title}</h3>
-                  <ul className="space-y-2.5">
-                    {module.items.map((item, j) => (
-                      <li key={j} className="flex items-start gap-2.5 text-sm text-slate-400">
-                        <CheckCircle2 className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
+            <div className="p-6 rounded-2xl bg-dark-card border border-dark-border/80">
+              <ul className="space-y-3">
+                {course.syllabus.flatMap(module => module.items).map((item, i) => (
+                  <li key={i} className="flex items-start gap-3 text-sm sm:text-base text-slate-400">
+                    <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
