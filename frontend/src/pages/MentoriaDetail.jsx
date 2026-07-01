@@ -67,32 +67,6 @@ const MentoriaDetail = () => {
                 Mentoria {course.title}
               </h1>
             
-            {/* Quick stats grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-6 border-t border-dark-border/60">
-              <div className="flex items-center gap-3">
-                <Calendar className="w-5 h-5 text-primary flex-shrink-0" />
-                <div>
-                  <h4 className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Duração</h4>
-                  <p className="text-xs font-semibold text-slate-200 mt-0.5">{course.duration}</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <Users className="w-5 h-5 text-primary flex-shrink-0" />
-                <div>
-                  <h4 className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Público-Alvo</h4>
-                  <p className="text-xs font-semibold text-slate-200 mt-0.5 truncate max-w-[200px]">{course.audience}</p>
-                </div>
-              </div>
-
-              <div className="flex items-center gap-3">
-                <Award className="w-5 h-5 text-primary flex-shrink-0" />
-                <div>
-                  <h4 className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">Investimento</h4>
-                  <p className="text-xs font-semibold text-slate-200 mt-0.5">{course.investment}</p>
-                </div>
-              </div>
-            </div>
 
             {/* Direct CTA */}
             <div className="pt-4">
