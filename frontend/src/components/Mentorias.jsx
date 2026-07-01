@@ -13,10 +13,10 @@ const Mentorias = () => {
         {/* Section Title */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white">
-            Nossas <span className="text-primary glow-text-primary">Mentorias Preparatórias</span>
+            Nossas <span className="text-primary glow-text-primary">Mentorias</span>
           </h2>
           <p className="text-slate-400 leading-relaxed">
-            Selecione a mentoria ideal para os seus objetivos profissionais. Nossos encontros são interativos, com resolução de questões comentadas em tempo real.
+            Conquiste sua certificação com uma mentoria feita exclusivamente para você. Atendimento individual, plano de estudos personalizado e acompanhamento contínuo até a sua aprovação.
           </p>
         </div>
 
