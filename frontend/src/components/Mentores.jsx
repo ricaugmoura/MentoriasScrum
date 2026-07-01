@@ -30,7 +30,7 @@ const Mentores = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-white">
-            Nossos <span className="text-primary glow-text-primary">Mentores Especialistas</span>
+            Nossos <span className="text-primary glow-text-primary">Mentores</span>
           </h2>
           <p className="text-slate-400 leading-relaxed">
             Aprenda com profissionais atuantes no mercado. Nossos mentores não ensinam apenas teoria, mas compartilham bagagem real e casos reais de sucesso.
