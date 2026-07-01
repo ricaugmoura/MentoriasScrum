@@ -35,7 +35,7 @@ const Mentorias = () => {
 
               {/* Title & Subtitle */}
               <div className="space-y-1 mb-4">
-                <h3 className="font-display font-extrabold text-2xl text-white tracking-tight">{course.title}</h3>
+                <h3 className="font-display font-extrabold text-2xl text-white tracking-tight whitespace-pre-line">{course.title}</h3>
                 <p className="text-xs font-semibold text-primary uppercase tracking-wider">{course.subtitle}</p>
               </div>
 

@@ -9,7 +9,7 @@ const MentoriaDetail = () => {
 
   React.useEffect(() => {
     if (course) {
-      document.title = `Mentoria ${course.title} | ${course.subtitle} - Mentorias Scrum`;
+      document.title = `Mentoria ${course.title.replace('\n', ' ')} | ${course.subtitle} - Mentorias Scrum`;
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
         metaDesc.setAttribute('content', course.description);
@@ -20,7 +20,7 @@ const MentoriaDetail = () => {
       document.title = 'Mentorias Scrum | Preparatórios para Certificação Ágil';
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
-        metaDesc.setAttribute('content', 'Prepare-se para as certificações ágeis da Scrum.org com nossos mentores especialistas. Mentorias Scrum focadas na sua aprovação.');
+        metaDesc.setAttribute('content', 'Prepare-se para as certificações ágeis da Scrum.org with nossos mentores especialistas. Mentorias Scrum focadas na sua aprovação.');
       }
     };
   }, [course]);
@@ -53,7 +53,7 @@ const MentoriaDetail = () => {
             <span className="px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary uppercase tracking-wider">
               {course.subtitle}
             </span>
-            <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight">
+            <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight whitespace-pre-line">
               Mentoria {course.title}
             </h1>
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
