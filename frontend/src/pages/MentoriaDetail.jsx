@@ -77,7 +77,7 @@ const MentoriaDetail = () => {
                 className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 text-dark font-extrabold text-base hover:bg-emerald-600 active:scale-[0.98] transition-all cursor-pointer shadow-lg shadow-emerald-500/10"
               >
                 <MessageCircle className="w-5 h-5" />
-                Verificar Vagas e Datas no WhatsApp
+                Verifique Datas e Investimento
               </a>
             </div>
 
@@ -101,6 +101,19 @@ const MentoriaDetail = () => {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            {/* Direct CTA under Syllabus */}
+            <div className="pt-6">
+              <a
+                href={`https://wa.me/5511957318784?text=${encodeURIComponent(course.whatsappMsg)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-emerald-500 text-dark font-extrabold text-base hover:bg-emerald-600 active:scale-[0.98] transition-all cursor-pointer shadow-lg shadow-emerald-500/10"
+              >
+                <MessageCircle className="w-5 h-5" />
+                Verifique Datas e Investimento
+              </a>
             </div>
           </div>
 
