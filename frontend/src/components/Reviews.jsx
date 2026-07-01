@@ -75,9 +75,9 @@ const Reviews = () => {
           <Quote className="absolute -top-4 -left-4 w-32 h-32 text-white/[0.02] transform -rotate-12 pointer-events-none" />
 
           {/* Testimonial Content */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
             {[reviews[activeIndex], reviews[(activeIndex + 1) % reviews.length]].map((review, idx) => (
-              <div key={idx} className={`space-y-6 flex flex-col justify-between ${idx === 1 ? 'hidden lg:flex' : 'flex'}`}>
+              <div key={idx} className={`space-y-6 flex flex-col justify-between ${idx === 1 ? 'hidden md:flex' : 'flex'}`}>
                 <div className="space-y-4">
                   {/* Rating Stars */}
                   <div className="flex justify-center gap-1">
