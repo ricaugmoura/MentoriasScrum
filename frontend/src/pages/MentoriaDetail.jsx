@@ -66,9 +66,6 @@ const MentoriaDetail = () => {
               <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight whitespace-pre-line">
                 Mentoria {course.title}
               </h1>
-              <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-                {course.description}
-              </p>
             
             {/* Quick stats grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-6 border-t border-dark-border/60">
