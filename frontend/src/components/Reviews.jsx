@@ -57,7 +57,7 @@ const Reviews = () => {
   const currentReview = reviews[activeIndex];
 
   return (
-    <section id="depoimentos" className="relative py-20 bg-dark-card/20 border-y border-dark-border/80">
+    <section id="depoimentos" className="relative pt-8 pb-20 lg:pt-10 bg-dark-card/20 border-y border-dark-border/80">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Section Header */}
