@@ -33,12 +33,21 @@ const Mentorias = () => {
                 <BookOpen className="w-5 h-5 text-primary" />
               </div>
 
-              {/* Title & Subtitle */}
-              <div className="space-y-1 mb-4">
-                <h3 className="font-display font-extrabold text-2xl text-white tracking-tight whitespace-pre-line">{course.title}</h3>
-                {course.subtitle && (
-                  <p className="text-xs font-semibold text-primary uppercase tracking-wider">{course.subtitle}</p>
+              {/* Title & Subtitle with Shield Icon */}
+              <div className="flex items-start gap-4 mb-4">
+                {course.shield && (
+                  <img 
+                    src={course.shield} 
+                    alt={`Escudo ${course.title.replace('\n', ' ')}`} 
+                    className="w-16 h-16 object-contain flex-shrink-0"
+                  />
                 )}
+                <div className="space-y-1">
+                  <h3 className="font-display font-extrabold text-xl text-white tracking-tight whitespace-pre-line leading-tight">{course.title}</h3>
+                  {course.subtitle && (
+                    <p className="text-xs font-semibold text-primary uppercase tracking-wider">{course.subtitle}</p>
+                  )}
+                </div>
               </div>
 
               {/* Description */}

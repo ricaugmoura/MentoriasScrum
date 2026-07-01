@@ -49,18 +49,26 @@ const MentoriaDetail = () => {
 
         {/* Course Header Hero card */}
         <div className="p-8 sm:p-12 rounded-3xl bg-dark-card border border-dark-border glow-primary mb-12">
-          <div className="max-w-4xl space-y-6">
-            {course.subtitle && (
-              <span className="px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary uppercase tracking-wider">
-                {course.subtitle}
-              </span>
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-8">
+            {course.shield && (
+              <img 
+                src={course.shield} 
+                alt={`Escudo ${course.title.replace('\n', ' ')}`} 
+                className="w-24 h-24 sm:w-32 sm:h-32 object-contain flex-shrink-0"
+              />
             )}
-            <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight whitespace-pre-line">
-              Mentoria {course.title}
-            </h1>
-            <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
-              {course.description}
-            </p>
+            <div className="flex-grow space-y-6 text-center md:text-left">
+              {course.subtitle && (
+                <span className="inline-block px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary uppercase tracking-wider">
+                  {course.subtitle}
+                </span>
+              )}
+              <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight whitespace-pre-line">
+                Mentoria {course.title}
+              </h1>
+              <p className="text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+                {course.description}
+              </p>
             
             {/* Quick stats grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 pt-6 border-t border-dark-border/60">
@@ -104,6 +112,7 @@ const MentoriaDetail = () => {
 
           </div>
         </div>
+      </div>
 
         {/* Content Breakdown grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
