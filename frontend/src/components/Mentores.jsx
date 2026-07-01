@@ -17,8 +17,8 @@ const mentors = [
       { label: 'Alunos Aprovados', val: '2.5k+' },
       { label: 'Nota Média Exame', val: '97%' }
     ],
-    // Placeholders for real photo. We'll use a premium placeholder or the user can easily swap
-    avatar: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&h=300&q=80'
+    // Local photo asset uploaded by user
+    avatar: '/assets/ricardo-avatar.jpeg'
   }
 ];
 
