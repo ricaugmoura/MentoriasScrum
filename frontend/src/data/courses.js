@@ -2,7 +2,7 @@ export const courses = [
   {
     slug: 'psm-i',
     title: 'Preparatório\nProfessional Scrum Master I',
-    subtitle: 'PSM I',
+    subtitle: '',
     description: 'Domine o framework Scrum, os papéis, eventos, artefatos e regras. Prepare-se para gabaritar a certificação de entrada mais reconhecida do mercado ágil.',
     duration: '12h ao vivo + Gravações',
     audience: 'Scrum Masters, Gestores, Líderes e Desenvolvedores',
@@ -42,7 +42,7 @@ export const courses = [
   {
     slug: 'psm-ii',
     title: 'Preparatório\nProfessional Scrum Master II',
-    subtitle: 'PSM II',
+    subtitle: '',
     description: 'Eleve o nível do seu agilismo. Foco em facilitação avançada, coaching, mentoria, remoção de impedimentos complexos e liderança servil avançada.',
     duration: '16h ao vivo + Gravações',
     audience: 'Scrum Masters experientes, Agile Coaches e Agilistas Seniores',
@@ -78,7 +78,7 @@ export const courses = [
   {
     slug: 'pspo-i',
     title: 'Preparatório\nProfessional Scrum Product Owner I',
-    subtitle: 'PSPO I',
+    subtitle: '',
     description: 'Aprenda como maximizar o valor de negócios de produtos. Foco em gestão do Product Backlog, release planning, métricas de valor e colaboração com stakeholders.',
     duration: '12h ao vivo + Gravações',
     audience: 'Product Owners, Product Managers, Empreendedores e Analistas',
@@ -118,7 +118,7 @@ export const courses = [
   {
     slug: 'pspo-ii',
     title: 'Preparatório\nProfessional Scrum Product Owner II',
-    subtitle: 'PSPO II',
+    subtitle: '',
     description: 'Aprofunde seus conhecimentos em gestão de produto. Visão estratégica de produto, métricas de valor avançadas, maximização de valor de portfólios e tomada de decisão.',
     duration: '16h ao vivo + Gravações',
     audience: 'Product Owners Seniores, Product Leads e Product Managers',
@@ -150,7 +150,7 @@ export const courses = [
   {
     slug: 'psk',
     title: 'Preparatório\nProfessional Scrum with Kanban',
-    subtitle: 'PSK',
+    subtitle: '',
     description: 'Integre Scrum com Kanban de forma prática. Melhore o fluxo de entrega de valor, otimize tempos de ciclo e utilize métricas visuais sem descaracterizar o Scrum.',
     duration: '8h ao vivo + Gravações',
     audience: 'Times Scrum, Scrum Masters e Agile Coaches',
@@ -182,7 +182,7 @@ export const courses = [
   {
     slug: 'pal-i',
     title: 'Preparatório\nProfessional Agile Leadership I',
-    subtitle: 'PAL I',
+    subtitle: '',
     description: 'Capacite líderes para apoiar e guiar equipes autogerenciáveis. Compreenda a cultura ágil, métricas de liderança e facilitação de mudanças organizacionais.',
     duration: '10h ao vivo + Gravações',
     audience: 'Gerentes, Diretores, Líderes de Equipe e Executivos',
@@ -214,7 +214,7 @@ export const courses = [
   {
     slug: 'pal-ebm',
     title: 'Preparatório\nEvidence-Based Management',
-    subtitle: 'PAL-EBM',
+    subtitle: '',
     description: 'Aprenda a guiar decisões de negócios através de valor e evidências empíricas. Otimize investimentos com foco no valor atual, valor não realizado e capacidade de inovação.',
     duration: '8h ao vivo + Gravações',
     audience: 'Product Owners, Executivos, Agile Coaches e Stakeholders',
@@ -246,7 +246,7 @@ export const courses = [
   {
     slug: 'sps',
     title: 'Preparatório\nScaled Professional Scrum (Nexus)',
-    subtitle: 'SPS',
+    subtitle: '',
     description: 'Descubra como escalar o Scrum usando o Nexus. Aprenda a coordenar e integrar o trabalho de múltiplos times trabalhando em um único Product Backlog.',
     duration: '10h ao vivo + Gravações',
     audience: 'Agile Coaches, Scrum Masters de escala e Líderes de Programa',
@@ -286,7 +286,7 @@ export const courses = [
   {
     slug: 'psu',
     title: 'Preparatório\nProfessional Scrum with UX',
-    subtitle: 'PSU',
+    subtitle: '',
     description: 'Aprenda a integrar design de experiência do usuário (UX) em Sprints Scrum. Descubra como validar hipóteses e experimentar com foco na entrega contínua de valor.',
     duration: '10h ao vivo + Gravações',
     audience: 'UX/UI Designers, Desenvolvedores e Product Owners',
@@ -318,7 +318,7 @@ export const courses = [
   {
     slug: 'psd',
     title: 'Preparatório\nProfessional Scrum Developer',
-    subtitle: 'PSD',
+    subtitle: '',
     description: 'Domine as práticas de engenharia de software dentro de Sprints Scrum. Inclui TDD, Integração Contínua, arquitetura emergente e engenharia de qualidade.',
     duration: '12h ao vivo + Gravações',
     audience: 'Desenvolvedores, Engenheiros de Software, QAs e Devs em geral',

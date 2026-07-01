@@ -9,7 +9,7 @@ const MentoriaDetail = () => {
 
   React.useEffect(() => {
     if (course) {
-      document.title = `Mentoria ${course.title.replace('\n', ' ')} | ${course.subtitle} - Mentorias Scrum`;
+      document.title = `Mentoria ${course.title.replace('\n', ' ')}${course.subtitle ? ` | ${course.subtitle}` : ''} - Mentorias Scrum`;
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
         metaDesc.setAttribute('content', course.description);
@@ -50,9 +50,11 @@ const MentoriaDetail = () => {
         {/* Course Header Hero card */}
         <div className="p-8 sm:p-12 rounded-3xl bg-dark-card border border-dark-border glow-primary mb-12">
           <div className="max-w-4xl space-y-6">
-            <span className="px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary uppercase tracking-wider">
-              {course.subtitle}
-            </span>
+            {course.subtitle && (
+              <span className="px-3 py-1.5 rounded-lg bg-primary/10 border border-primary/20 text-xs font-bold text-primary uppercase tracking-wider">
+                {course.subtitle}
+              </span>
+            )}
             <h1 className="font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-tight whitespace-pre-line">
               Mentoria {course.title}
             </h1>
