@@ -39,7 +39,7 @@ const mentors = [
 
 const Mentores = () => {
   return (
-    <section id="mentores" className="relative py-20 overflow-hidden">
+    <section id="mentores" className="relative pt-8 pb-20 lg:pt-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Section Header */}
