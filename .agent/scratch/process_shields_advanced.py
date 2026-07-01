@@ -2,7 +2,7 @@ import os
 import math
 from PIL import Image, ImageDraw
 
-public_dir = "/home/ricardo/Projetos/MentoriasScrum/public"
+public_dir = "/home/ricardo/Projetos/MentoriasScrum/frontend/public"
 images = [
     "PAL-EBM.png", "PAL-I.png", "PSD.png", "PSK.png",
     "PSM-I.png", "PSM-II.png", "PSPO-I.png", "PSPO-II.png", "PSU.png", "sps.jpg"
