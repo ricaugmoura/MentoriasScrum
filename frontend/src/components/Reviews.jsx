@@ -54,11 +54,9 @@ const Reviews = () => {
     return null; // Don't show the section if no reviews are loaded
   }
 
-  const currentReview = reviews[activeIndex];
-
   return (
     <section id="depoimentos" className="relative pt-8 pb-20 lg:pt-10 bg-dark-card/20 border-y border-dark-border/80">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         
         {/* Section Header */}
         <div className="max-w-3xl mx-auto mb-14 space-y-4">
@@ -72,36 +70,42 @@ const Reviews = () => {
         </div>
 
         {/* Carousel Container */}
-        <div className="relative glass-panel rounded-3xl p-8 sm:p-12 md:p-16 shadow-xl max-w-4xl mx-auto min-h-[300px] flex flex-col justify-between overflow-hidden">
+        <div className="relative glass-panel rounded-3xl p-8 sm:p-12 md:p-16 shadow-xl max-w-5xl mx-auto min-h-[300px] flex flex-col justify-between overflow-hidden">
           {/* Quote icon background ornament */}
           <Quote className="absolute -top-4 -left-4 w-32 h-32 text-white/[0.02] transform -rotate-12 pointer-events-none" />
 
           {/* Testimonial Content */}
-          <div className="space-y-6 relative z-10">
-            {/* Rating Stars */}
-            <div className="flex justify-center gap-1">
-              {[...Array(currentReview.rating)].map((_, i) => (
-                <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
-              ))}
-            </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 relative z-10">
+            {[reviews[activeIndex], reviews[(activeIndex + 1) % reviews.length]].map((review, idx) => (
+              <div key={idx} className={`space-y-6 flex flex-col justify-between ${idx === 1 ? 'hidden lg:flex' : 'flex'}`}>
+                <div className="space-y-4">
+                  {/* Rating Stars */}
+                  <div className="flex justify-center gap-1">
+                    {[...Array(review.rating || 5)].map((_, i) => (
+                      <Star key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" />
+                    ))}
+                  </div>
 
-            {/* Testimonial Text */}
-            <p className="text-base sm:text-lg md:text-xl text-slate-200 font-medium leading-relaxed italic max-w-3xl mx-auto">
-              "{currentReview.text}"
-            </p>
+                  {/* Testimonial Text */}
+                  <p className="text-base sm:text-lg text-slate-200 font-medium leading-relaxed italic mx-auto text-center">
+                    "{review.text}"
+                  </p>
+                </div>
 
-            {/* Author Profile */}
-            <div className="flex items-center justify-center gap-3.5 pt-4">
-              <img 
-                src={currentReview.profile_photo_url} 
-                alt={currentReview.author_name} 
-                className="w-12 h-12 rounded-full border border-primary/20 object-cover"
-              />
-              <div className="text-left">
-                <p className="text-sm font-bold text-white tracking-wide">{currentReview.author_name}</p>
-                <p className="text-[11px] text-slate-500 font-semibold">{currentReview.relative_time_description}</p>
+                {/* Author Profile */}
+                <div className="flex items-center justify-center gap-3.5 pt-4">
+                  <img 
+                    src={review.profile_photo_url} 
+                    alt={review.author_name} 
+                    className="w-14 h-14 rounded-full border border-primary/20 object-cover"
+                  />
+                  <div className="text-left">
+                    <p className="text-lg font-bold text-white tracking-wide">{review.author_name}</p>
+                    <p className="text-xs text-slate-500 font-semibold">{review.relative_time_description}</p>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
 
           {/* Controls */}
