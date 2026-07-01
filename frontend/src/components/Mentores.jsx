@@ -19,6 +19,21 @@ const mentors = [
     ],
     // Local photo asset uploaded by user
     avatar: '/assets/ricardo-avatar.jpeg'
+  },
+  {
+    name: 'Ana Souza (Exemplo)',
+    role: 'Mentora Convidada & Agile Master',
+    bio: 'Profissional dedicada a otimizar fluxos de trabalho e escalar equipes ágeis com base em evidências. Com uma carreira consolidada em startups e grandes corporações, Ana traz uma perspectiva moderna de gestão de produtos. Na MentoriasScrum, seu foco é capacitar novos líderes a implementarem o Scrum na essência, indo muito além das regras do guia.',
+    certifications: [
+      'Professional Scrum Master II (PSM II)',
+      'Professional Scrum Product Owner I (PSPO I)'
+    ],
+    stats: [
+      { label: 'Times Escalados', val: '10+' },
+      { label: 'Sessões Mentoria', val: '800+' },
+      { label: 'Nota Média Exame', val: '94%' }
+    ],
+    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&h=300&q=80'
   }
 ];
 
