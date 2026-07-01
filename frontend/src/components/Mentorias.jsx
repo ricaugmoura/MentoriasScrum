@@ -1,9 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { BookOpen, Calendar, Users, MessageCircle, ArrowRight } from 'lucide-react';
 import { courses } from '../data/courses';
 
 const Mentorias = () => {
+  const navigate = useNavigate();
+
   return (
     <section id="mentorias" className="relative pt-10 pb-20 lg:pt-12 lg:pb-24 bg-dark-card/30 border-y border-dark-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,7 +25,8 @@ const Mentorias = () => {
           {courses.map((course) => (
             <div 
               key={course.slug} 
-              className={`flex flex-col h-full p-8 rounded-2xl bg-dark-card border backdrop-blur-sm hover:-translate-y-1 transition-all duration-300 ${course.color}`}
+              onClick={() => navigate(`/mentoria/${course.slug}`)}
+              className={`flex flex-col h-full p-8 rounded-2xl bg-dark-card border backdrop-blur-sm hover:-translate-y-1 transition-all duration-300 cursor-pointer ${course.color}`}
             >
               {/* Card Badge */}
               <div className="flex justify-between items-start mb-6">
@@ -68,7 +71,7 @@ const Mentorias = () => {
               </div>
 
               {/* Action Buttons */}
-              <div className="space-y-3">
+              <div className="space-y-3" onClick={(e) => e.stopPropagation()}>
                 <a
                   href={`https://wa.me/5511957318784?text=${encodeURIComponent(course.whatsappMsg)}`}
                   target="_blank"
