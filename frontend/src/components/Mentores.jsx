@@ -7,10 +7,11 @@ const mentors = [
     role: 'Mentor Principal & Agile Coach',
     bio: 'Minha jornada no ecossistema de tecnologia me transformou em um especialista em conectar processos ágeis a resultados de mercado. Atuando como Agile Coach, Scrum Master e consultor sênior, trago a bagagem prática de quem enfrenta e resolve os desafios reais da gestão de projetos e da inovação no dia a dia. Na MentoriasScrum, traduzo metodologias complexas em ferramentas simples e poderosas para potencializar a sua carreira ou a sua empresa. Meu compromisso é com o seu crescimento contínuo e com uma agilidade que faz sentido e funciona na prática.',
     certifications: [
-      'Professional Scrum Master I & II (PSM I, PSM II)',
-      'Professional Scrum Product Owner I & II (PSPO I, PSPO II)',
-      'Scaled Professional Scrum (SPS / Nexus)',
-      'Professional Agile Leadership (PAL I)'
+      'PSM-I e II',
+      'PSPO-I',
+      'PSK',
+      'SPS',
+      'PSU'
     ],
     stats: [
       { label: 'Projetos Ágeis', val: '15+' },
@@ -104,7 +105,7 @@ const Mentores = () => {
                 <div className="space-y-4 pt-4 border-t border-dark-border/40">
                   <h4 className="text-lg font-bold text-white flex items-center gap-2">
                     <Award className="w-5 h-5 text-primary" />
-                    Principais Certificações Scrum.org
+                    Mentor das certificações
                   </h4>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm">
