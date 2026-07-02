@@ -92,7 +92,7 @@ const Contato = () => {
                   </div>
                   <div>
                     <h4 className="text-xs text-slate-500 font-semibold uppercase tracking-wider">E-mail</h4>
-                    <p className="text-sm font-semibold text-slate-200 mt-1">contato@mentoriasscrum.com.br</p>
+                    <p className="text-sm font-semibold text-slate-200 mt-1">Use o formulário ao lado</p>
                   </div>
                 </div>
 
@@ -109,7 +109,7 @@ const Contato = () => {
                       rel="noopener noreferrer" 
                       className="text-sm font-semibold text-slate-200 mt-1 hover:text-primary transition-colors block"
                     >
-                      +55 11 95731-8784
+                      Enviar Mensagem
                     </a>
                   </div>
                 </div>
