@@ -22,19 +22,22 @@ const mentors = [
     avatar: '/assets/ricardo-avatar.jpeg'
   },
   {
-    name: 'Ana Souza (Exemplo)',
-    role: 'Mentora Convidada & Agile Master',
-    bio: 'Profissional dedicada a otimizar fluxos de trabalho e escalar equipes ágeis com base em evidências. Com uma carreira consolidada em startups e grandes corporações, Ana traz uma perspectiva moderna de gestão de produtos. Na MentoriasScrum, seu foco é capacitar novos líderes a implementarem o Scrum na essência, indo muito além das regras do guia.',
+    name: 'Paulo de Tarso',
+    role: 'Agile Coach & Gerente de Projetos',
+    bio: 'Gerente de Projetos, Agile Coach, Product Owner e Scrum Master com mais de 30 anos de experiência em TI. Especialista em gestão de projetos, PMO, transformação ágil e liderança de equipes multidisciplinares. Certificado PMP, PMI-ACP, PRINCE2, SAFe e Scrum.org, com atuação em grandes empresas dos setores de saúde, telecomunicações, mídia, indústria e governo, impulsionando a entrega de valor por meio da inovação e da Inteligência Artificial.',
     certifications: [
-      'Scrum Master II',
-      'Product Owner I'
+      'Scrum Master I e II (PSM I, PSM II)',
+      'Product Owner I (PSPO I)',
+      'Scrum with Kanban (PSK)',
+      'Scaled Professional Scrum (SPS)',
+      'Professional Scrum with User Experience (PSU)'
     ],
     stats: [
-      { label: 'Times Escalados', val: '10+' },
-      { label: 'Sessões Mentoria', val: '800+' },
-      { label: 'Nota Média Exame', val: '94%' }
+      { label: 'Experiência em TI', val: '30+ Anos' },
+      { label: 'Projetos de TI', val: '50+' },
+      { label: 'Liderança de Times', val: '15+' }
     ],
-    avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&h=300&q=80'
+    avatar: '/assets/paulo-avatar.jpeg'
   }
 ];
 
