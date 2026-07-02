@@ -48,7 +48,8 @@ exports.sendContactEmail = async (req, res) => {
         }
 
         const emailContent = {
-            from: `"${name}" <${email}>`,
+            from: `"${name}" <${receiverEmail}>`,
+            replyTo: email,
             to: receiverEmail,
             subject: `[Contato Portal] ${subject}`,
             text: `Nome: ${name}\nE-mail: ${email}\nAssunto: ${subject}\nMensagem:\n\n${message}`,
