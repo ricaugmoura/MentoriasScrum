@@ -7,11 +7,11 @@ const mentors = [
     role: 'Mentor Principal & Agile Coach',
     bio: 'Minha jornada no ecossistema de tecnologia me transformou em um especialista em conectar processos ágeis a resultados de mercado. Atuando como Agile Coach, Scrum Master e consultor sênior, trago a bagagem prática de quem enfrenta e resolve os desafios reais da gestão de projetos e da inovação no dia a dia. Na MentoriasScrum, traduzo metodologias complexas em ferramentas simples e poderosas para potencializar a sua carreira ou a sua empresa. Meu compromisso é com o seu crescimento contínuo e com uma agilidade que faz sentido e funciona na prática.',
     certifications: [
-      'PSM-I e II',
-      'PSPO-I',
-      'PSK',
-      'SPS',
-      'PSU'
+      'Scrum Master--I e II',
+      'Product Owner I',
+      'Scrum With Kanban',
+      'Scrum Scaled',
+      'User Experience'
     ],
     stats: [
       { label: 'Projetos Ágeis', val: '15+' },
@@ -26,8 +26,8 @@ const mentors = [
     role: 'Mentora Convidada & Agile Master',
     bio: 'Profissional dedicada a otimizar fluxos de trabalho e escalar equipes ágeis com base em evidências. Com uma carreira consolidada em startups e grandes corporações, Ana traz uma perspectiva moderna de gestão de produtos. Na MentoriasScrum, seu foco é capacitar novos líderes a implementarem o Scrum na essência, indo muito além das regras do guia.',
     certifications: [
-      'Professional Scrum Master II (PSM II)',
-      'Professional Scrum Product Owner I (PSPO I)'
+      'Scrum Master II',
+      'Product Owner I'
     ],
     stats: [
       { label: 'Times Escalados', val: '10+' },

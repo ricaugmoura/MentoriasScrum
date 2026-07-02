@@ -1,7 +1,7 @@
 export const courses = [
   {
     slug: 'psm-i',
-    title: 'Preparatório\nProfessional Scrum Master I',
+    title: 'Preparatório\nScrum Master I',
     subtitle: '',
     shield: '/assets/PSM-I_transparent.png',
     description: 'Domine o framework Scrum, os papéis, eventos, artefatos e regras. Prepare-se para gabaritar a certificação de entrada mais reconhecida do mercado ágil.',
@@ -42,7 +42,7 @@ export const courses = [
   },
   {
     slug: 'psm-ii',
-    title: 'Preparatório\nProfessional Scrum Master II',
+    title: 'Preparatório\nScrum Master II',
     subtitle: '',
     shield: '/assets/PSM-II_transparent.png',
     description: 'Eleve o nível do seu agilismo. Foco em facilitação avançada, coaching, mentoria, remoção de impedimentos complexos e liderança servil avançada.',
@@ -79,7 +79,7 @@ export const courses = [
   },
   {
     slug: 'pspo-i',
-    title: 'Preparatório\nProfessional Scrum Product Owner I',
+    title: 'Preparatório\nScrum Product Owner I',
     subtitle: '',
     shield: '/assets/PSPO-I_transparent.png',
     description: 'Aprenda como maximizar o valor de negócios de produtos. Foco em gestão do Product Backlog, release planning, métricas de valor e colaboração com stakeholders.',
@@ -120,7 +120,7 @@ export const courses = [
   },
   {
     slug: 'pspo-ii',
-    title: 'Preparatório\nProfessional Scrum Product Owner II',
+    title: 'Preparatório\nScrum Product Owner II',
     subtitle: '',
     shield: '/assets/PSPO-II_transparent.png',
     description: 'Aprofunde seus conhecimentos em gestão de produto. Visão estratégica de produto, métricas de valor avançadas, maximização de valor de portfólios e tomada de decisão.',
@@ -153,7 +153,7 @@ export const courses = [
   },
   {
     slug: 'psk',
-    title: 'Preparatório\nProfessional Scrum with Kanban',
+    title: 'Preparatório\nScrum with Kanban',
     subtitle: '',
     shield: '/assets/PSK_transparent.png',
     description: 'Integre Scrum com Kanban de forma prática. Melhore o fluxo de entrega de valor, otimize tempos de ciclo e utilize métricas visuais sem descaracterizar o Scrum.',
@@ -186,7 +186,7 @@ export const courses = [
   },
   {
     slug: 'pal-i',
-    title: 'Preparatório\nProfessional Agile Leadership I',
+    title: 'Preparatório\nAgile Leadership I',
     subtitle: '',
     shield: '/assets/PAL-I_transparent.png',
     description: 'Capacite líderes para apoiar e guiar equipes autogerenciáveis. Compreenda a cultura ágil, métricas de liderança e facilitação de mudanças organizacionais.',
@@ -252,7 +252,7 @@ export const courses = [
   },
   {
     slug: 'sps',
-    title: 'Preparatório\nScaled Professional Scrum (Nexus)',
+    title: 'Preparatório\nScaled Scrum (Nexus)',
     subtitle: '',
     shield: '/assets/sps_transparent.png',
     description: 'Descubra como escalar o Scrum usando o Nexus. Aprenda a coordenar e integrar o trabalho de múltiplos times trabalhando em um único Product Backlog.',
@@ -293,7 +293,7 @@ export const courses = [
   },
   {
     slug: 'psu',
-    title: 'Preparatório\nProfessional Scrum with UX',
+    title: 'Preparatório\nScrum with UX',
     subtitle: '',
     shield: '/assets/PSU_transparent.png',
     description: 'Aprenda a integrar design de experiência do usuário (UX) em Sprints Scrum. Descubra como validar hipóteses e experimentar com foco na entrega contínua de valor.',
@@ -326,7 +326,7 @@ export const courses = [
   },
   {
     slug: 'psd',
-    title: 'Preparatório\nProfessional Scrum Developer',
+    title: 'Preparatório\nScrum Developer',
     subtitle: '',
     shield: '/assets/PSD_transparent.png',
     description: 'Domine as práticas de engenharia de software dentro de Sprints Scrum. Inclui TDD, Integração Contínua, arquitetura emergente e engenharia de qualidade.',
