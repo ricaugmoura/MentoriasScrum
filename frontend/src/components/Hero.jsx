@@ -1,5 +1,4 @@
-import React from 'react';
-import { ArrowRight, Sparkles, ShieldCheck, BookOpen, Users, Award, UserCheck, MessageCircle } from 'lucide-react';
+import { ArrowRight, Sparkles, ShieldCheck, Award, UserCheck, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Hero = () => {

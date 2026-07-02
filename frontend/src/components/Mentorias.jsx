@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { BookOpen, Calendar, Users, MessageCircle, ArrowRight } from 'lucide-react';
 import { courses } from '../data/courses';
@@ -85,7 +84,7 @@ const Mentorias = () => {
                   to={`/mentoria/${course.slug}`}
                   className="w-full inline-flex items-center justify-center gap-1.5 py-3 px-4 rounded-xl bg-dark-card border border-dark-border hover:border-slate-600 hover:bg-dark-card/90 text-slate-300 font-semibold text-sm transition-all"
                 >
-                  Ver Conteúdo Programático
+                  Verificar detalhes
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>

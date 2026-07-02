@@ -1,4 +1,3 @@
-import React from 'react';
 import Hero from '../components/Hero';
 import Mentorias from '../components/Mentorias';
 import Mentores from '../components/Mentores';
