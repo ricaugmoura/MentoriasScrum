@@ -1,13 +1,13 @@
-import React from 'react';
+import { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { CheckCircle2, ArrowLeft, MessageCircle, Calendar, Users, Award, ShieldAlert } from 'lucide-react';
+import { CheckCircle2, ArrowLeft, MessageCircle, ShieldAlert } from 'lucide-react';
 import { coursesData } from '../data/courses';
 
 const MentoriaDetail = () => {
   const { slug } = useParams();
   const course = coursesData[slug];
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (course) {
       document.title = `Mentoria ${course.title.replace('\n', ' ')}${course.subtitle ? ` | ${course.subtitle}` : ''} - Mentorias Scrum`;
       const metaDesc = document.querySelector('meta[name="description"]');
@@ -119,17 +119,51 @@ const MentoriaDetail = () => {
 
           {/* Differential list sidebar */}
           <div className="lg:col-span-4 space-y-6 lg:sticky lg:top-24">
+            {/* O que está incluso? Card */}
             <div className="p-6 rounded-2xl bg-dark-card/50 border border-dark-border/80 space-y-6">
-              <h3 className="font-display font-bold text-lg text-white">O que está incluso?</h3>
+              <h3 className="font-display font-bold text-lg text-white border-b border-dark-border/60 pb-3">O que está incluso?</h3>
               
               <ul className="space-y-4">
-                {course.features.map((feat, i) => (
-                  <li key={i} className="flex items-start gap-3 text-sm text-slate-300 leading-relaxed">
-                    <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
-                    <span>{feat}</span>
-                  </li>
-                ))}
+                <li className="flex items-start gap-3 text-sm text-slate-300 leading-relaxed">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <span>Didática simplificada baseada no Scrum Guide 2020.</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm text-slate-300 leading-relaxed">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <span>Acesso direto com os mentores por Whatsapp.</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm text-slate-300 leading-relaxed">
+                  <CheckCircle2 className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
+                  <span>Simulados exclusivos semelhantes aos cobrados no exame.</span>
+                </li>
               </ul>
+            </div>
+
+            {/* Funcionamento? Card */}
+            <div className="p-6 rounded-2xl bg-dark-card/50 border border-dark-border/80 space-y-6">
+              <h3 className="font-display font-bold text-lg text-white border-b border-dark-border/60 pb-3">Funcionamento?</h3>
+              
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3 text-sm text-slate-300 leading-relaxed">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>Disponibilização de todos materiais atualizados.</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm text-slate-300 leading-relaxed">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>Acesso direto com os mentores por Whatsapp.</span>
+                </li>
+                <li className="flex items-start gap-3 text-sm text-slate-300 leading-relaxed">
+                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                  <span>Duas ou três aulas individuais com o mentor para dúvidas.</span>
+                </li>
+              </ul>
+            </div>
+
+            {/* Disclaimer */}
+            <div className="p-4 rounded-xl bg-amber-500/5 border border-amber-500/10 text-center">
+              <p className="text-xs text-amber-500/80 font-medium">
+                Não somos um treinamento oficial scrum.org
+              </p>
             </div>
           </div>
 
