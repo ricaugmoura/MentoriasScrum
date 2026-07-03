@@ -1,5 +1,16 @@
 const crypto = require('crypto');
 
+/**
+ * Constant-time comparison helper to prevent timing attacks.
+ * Hashes inputs with SHA-256 to ensure equal length before timingSafeEqual.
+ */
+function safeCompare(a, b) {
+    if (typeof a !== 'string' || typeof b !== 'string') return false;
+    const aHash = crypto.createHash('sha256').update(a).digest();
+    const bHash = crypto.createHash('sha256').update(b).digest();
+    return crypto.timingSafeEqual(aHash, bHash);
+}
+
 class AuthService {
     constructor() {
         // sessions map stores token -> expiration timestamp
@@ -18,7 +29,10 @@ class AuthService {
         const expectedUsername = process.env.ADMIN_USERNAME || 'admin';
         const expectedPassword = process.env.ADMIN_PASSWORD || 'admin';
 
-        if (username === expectedUsername && password === expectedPassword) {
+        const isUsernameValid = safeCompare(username, expectedUsername);
+        const isPasswordValid = safeCompare(password, expectedPassword);
+
+        if (isUsernameValid && isPasswordValid) {
             const token = crypto.randomBytes(32).toString('hex');
             const expires = Date.now() + this.SESSION_DURATION;
             this.sessions.set(token, expires);

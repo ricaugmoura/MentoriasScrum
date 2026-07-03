@@ -6,6 +6,19 @@ const smtpUser = process.env.SMTP_USER;
 const smtpPass = process.env.SMTP_PASS;
 const receiverEmail = process.env.CONTACT_RECEIVER_EMAIL || 'contato@mentoriasscrum.com.br';
 
+/**
+ * Helper to escape HTML characters and prevent HTML injection
+ */
+function escapeHtml(text) {
+    if (typeof text !== 'string') return text;
+    return text
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#039;');
+}
+
 const isMockEmail = !smtpHost || smtpHost === 'smtp.mailtrap.io' && smtpUser === 'your-smtp-user';
 
 let transporter = null;
@@ -47,20 +60,25 @@ exports.sendContactEmail = async (req, res) => {
             });
         }
 
+        const safeName = escapeHtml(name);
+        const safeEmail = escapeHtml(email);
+        const safeSubject = escapeHtml(subject);
+        const safeMessage = escapeHtml(message);
+
         const emailContent = {
-            from: `"${name}" <${receiverEmail}>`,
+            from: `"${safeName}" <${receiverEmail}>`,
             replyTo: email,
             to: receiverEmail,
-            subject: `[Contato Portal] ${subject}`,
+            subject: `[Contato Portal] ${safeSubject}`,
             text: `Nome: ${name}\nE-mail: ${email}\nAssunto: ${subject}\nMensagem:\n\n${message}`,
             html: `
                 <h3>Nova mensagem de contato do Portal</h3>
-                <p><strong>Nome:</strong> ${name}</p>
-                <p><strong>E-mail:</strong> ${email}</p>
-                <p><strong>Assunto:</strong> ${subject}</p>
+                <p><strong>Nome:</strong> ${safeName}</p>
+                <p><strong>E-mail:</strong> ${safeEmail}</p>
+                <p><strong>Assunto:</strong> ${safeSubject}</p>
                 <p><strong>Mensagem:</strong></p>
                 <div style="background: #f1f5f9; padding: 15px; border-radius: 5px; border: 1px solid #e2e8f0;">
-                    ${message.replace(/\n/g, '<br>')}
+                    ${safeMessage.replace(/\n/g, '<br>')}
                 </div>
             `
         };
