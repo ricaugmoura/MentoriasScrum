@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { io } from 'socket.io-client';
-import { ShieldCheck, MessageSquare, Terminal, Send, CheckCircle2, AlertCircle, RefreshCw } from 'lucide-react';
+import { ShieldCheck, Terminal, Send, CheckCircle2, AlertCircle, RefreshCw, LogOut } from 'lucide-react';
 
 const Dashboard = () => {
   const [status, setStatus] = useState('DISCONNECTED');
@@ -11,6 +11,16 @@ const Dashboard = () => {
   const [sending, setSending] = useState(false);
   const [feedback, setFeedback] = useState(null); // { success: boolean, msg: string }
   const terminalEndRef = useRef(null);
+
+  const translateStatus = (s) => {
+    switch (s) {
+      case 'DISCONNECTED': return 'Desconectado';
+      case 'INITIALIZING': return 'Inicializando navegador';
+      case 'QR_READY': return 'Aguardando leitura do QR';
+      case 'CONNECTED': return 'Conectado e Ativo';
+      default: return s;
+    }
+  };
 
   // Add line helper
   const addLog = (text, type = 'system') => {
@@ -25,15 +35,52 @@ const Dashboard = () => {
     }
   }, [logs]);
 
+  const handleLogout = async () => {
+    const token = localStorage.getItem('admin_token');
+    try {
+      await fetch('/api/auth/logout', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      });
+    } catch (e) {
+      console.error('Logout request failed:', e);
+    }
+    localStorage.removeItem('admin_token');
+    window.dispatchEvent(new Event('storage'));
+    window.location.href = '/login';
+  };
+
   // Connect WebSockets
   useEffect(() => {
-    addLog('Inicializando conexão WebSocket com o servidor...', 'system');
+    setTimeout(() => {
+      addLog('Inicializando conexão WebSocket com o servidor...', 'system');
+    }, 0);
     
-    // Connect to WebSocket server (proxied in dev, direct path in production)
-    const socket = io();
+    const token = localStorage.getItem('admin_token');
+    
+    // Connect to WebSocket server with auth token
+    const socket = io({
+      auth: {
+        token
+      }
+    });
 
     socket.on('connect', () => {
       addLog('Conectado ao servidor de atualizações via WebSocket.', 'system');
+    });
+
+    socket.on('connect_error', (err) => {
+      addLog(`Erro de conexão WebSocket: ${err.message}`, 'error');
+      if (err.message === 'Unauthorized') {
+        addLog('Redirecionando para tela de login...', 'error');
+        localStorage.removeItem('admin_token');
+        window.dispatchEvent(new Event('storage'));
+        setTimeout(() => {
+          window.location.href = '/login';
+        }, 1500);
+      }
     });
 
     socket.on('disconnect', () => {
@@ -65,15 +112,7 @@ const Dashboard = () => {
     };
   }, []);
 
-  const translateStatus = (s) => {
-    switch (s) {
-      case 'DISCONNECTED': return 'Desconectado';
-      case 'INITIALIZING': return 'Inicializando navegador';
-      case 'QR_READY': return 'Aguardando leitura do QR';
-      case 'CONNECTED': return 'Conectado e Ativo';
-      default: return s;
-    }
-  };
+
 
   const getStatusBadgeClass = () => {
     switch (status) {
@@ -108,16 +147,29 @@ const Dashboard = () => {
     setFeedback(null);
 
     try {
+      const token = localStorage.getItem('admin_token');
       const response = await fetch('/api/send', {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${token}`
         },
         body: JSON.stringify({
           number: cleanPhone,
           message: message
         })
       });
+
+      if (response.status === 401) {
+        setFeedback({ success: false, msg: 'Sessão expirada. Redirecionando...' });
+        localStorage.removeItem('admin_token');
+        window.dispatchEvent(new Event('storage'));
+        setTimeout(() => {
+          window.location.href = '/login';
+        }, 1500);
+        return;
+      }
+
       const data = await response.json();
 
       if (data.success) {
@@ -147,14 +199,26 @@ const Dashboard = () => {
           <p className="text-sm text-slate-400 mt-1">Conecte uma conta operacional do WhatsApp e teste o envio de mensagens via API.</p>
         </div>
 
-        {/* Status Badge */}
-        <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-semibold ${getStatusBadgeClass()}`}>
-          <span className={`w-2.5 h-2.5 rounded-full ${
-            status === 'CONNECTED' ? 'bg-emerald-500 animate-pulse' :
-            status === 'QR_READY' ? 'bg-yellow-500 animate-pulse' :
-            status === 'INITIALIZING' ? 'bg-cyan-500 animate-pulse' : 'bg-red-500'
-          }`}></span>
-          <span>{translateStatus(status)}</span>
+        {/* Badge & Logout Button */}
+        <div className="flex items-center gap-4">
+          {/* Status Badge */}
+          <div className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-semibold ${getStatusBadgeClass()}`}>
+            <span className={`w-2.5 h-2.5 rounded-full ${
+              status === 'CONNECTED' ? 'bg-emerald-500 animate-pulse' :
+              status === 'QR_READY' ? 'bg-yellow-500 animate-pulse' :
+              status === 'INITIALIZING' ? 'bg-cyan-500 animate-pulse' : 'bg-red-500'
+            }`}></span>
+            <span>{translateStatus(status)}</span>
+          </div>
+
+          {/* Logout Button */}
+          <button
+            onClick={handleLogout}
+            className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 hover:bg-red-500 hover:text-white text-sm font-bold transition-all cursor-pointer"
+          >
+            <LogOut className="w-4 h-4" />
+            <span>Sair</span>
+          </button>
         </div>
       </div>
 

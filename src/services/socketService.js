@@ -22,6 +22,19 @@ class SocketService {
             }
         });
 
+        const authService = require('./authService');
+        
+        // Authenticate WebSocket connections
+        this.io.use((socket, next) => {
+            const token = socket.handshake.auth.token;
+            if (authService.verify(token)) {
+                next();
+            } else {
+                console.warn(`[SOCKET] Unauthorized connection attempt rejected (ID: ${socket.id})`);
+                next(new Error('Unauthorized'));
+            }
+        });
+
         this.io.on('connection', (socket) => {
             console.log(`Web client connected via WebSockets (ID: ${socket.id})`);
 

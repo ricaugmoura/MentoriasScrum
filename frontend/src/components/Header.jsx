@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -25,10 +26,21 @@ const Header = () => {
     setIsOpen(false);
   }, [location]);
 
+  // Listen to login/logout events to update header state dynamically
+  useEffect(() => {
+    const checkAuth = () => {
+      setIsLoggedIn(!!localStorage.getItem('admin_token'));
+    };
+    checkAuth();
+
+    window.addEventListener('storage', checkAuth);
+    return () => window.removeEventListener('storage', checkAuth);
+  }, []);
+
   const navLinks = [
     { name: 'Início', path: '/' },
     { name: 'Contato', path: '/contato' },
-    { name: 'Painel WhatsApp', path: '/dashboard', accent: true }
+    { name: isLoggedIn ? 'Painel WhatsApp' : 'Entrar', path: '/dashboard', accent: true }
   ];
 
   return (

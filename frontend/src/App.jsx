@@ -5,7 +5,9 @@ import Home from './pages/Home';
 import Contato from './pages/Contato';
 import MentoriaDetail from './pages/MentoriaDetail';
 import Dashboard from './pages/Dashboard';
+import Login from './pages/Login';
 import ScrollToTop from './components/ScrollToTop';
+import ProtectedRoute from './components/ProtectedRoute';
 
 function App() {
   return (
@@ -27,7 +29,12 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/contato" element={<Contato />} />
             <Route path="/mentoria/:slug" element={<MentoriaDetail />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/dashboard" element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>
+            } />
           </Routes>
         </main>
 
